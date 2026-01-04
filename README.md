@@ -79,3 +79,4 @@ A modern ChatGPT-like web application built with Node.js and Express, featuring 
 - The app requires an active internet connection to communicate with the AI Builders API
 - Make sure your `AI_BUILDER_TOKEN` is valid and has access to the API
 
+# eagle_ai_chatbot
