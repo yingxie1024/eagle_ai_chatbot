@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Column: Conversation History -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="header-title">
+                    <div class="eaglet-icon">🦅</div>
+                    <h2>Conversations</h2>
+                </div>
+                <button class="new-chat-btn" id="newChatBtn">
+                    <span class="btn-icon">✨</span>
+                    New Chat
+                </button>
+            </div>
+            <div class="conversation-list" id="conversationList">
+                <!-- Conversation items will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Right Column: Current Conversation -->
+        <div class="main-content">
+            <div class="chat-header">
+                <div class="model-selector" id="modelSelector">
+                    <label for="modelSelect">Model:</label>
+                    <select id="modelSelect">
+                        <option value="supermind-agent-v1">Loading models...</option>
+                    </select>
+                </div>
+                <div class="model-display" id="modelDisplay" style="display: none;">
+                    <span class="model-label">🦅 Model:</span>
+                    <span class="model-name" id="modelName"></span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="welcome-message">
+                    <div class="welcome-eaglet">🦅</div>
+                    <h3>Welcome to Eagle AI Chat</h3>
+                    <p>Select a model and start soaring with your conversations!</p>
+                    <div class="welcome-decorations">
+                        <span class="deco-eaglet">🦅</span>
+                        <span class="deco-eaglet">🦅</span>
+                        <span class="deco-eaglet">🦅</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Type your message here..." 
+                        rows="1"
+                    ></textarea>
+                    <button id="sendBtn" class="send-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
